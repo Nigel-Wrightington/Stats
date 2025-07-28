@@ -4,14 +4,25 @@
  */
 function getLength(numbers) {
   // TODO
+
+  return numbers.length;
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
+
 function getSum(numbers) {
   // TODO
+  let total_Sum = 0;
+  let index = 0;
+
+  while (index < numbers.length) {
+    total_Sum += numbers[index];
+    index++;
+  }
+  return total_Sum;
 }
 
 /**
@@ -20,6 +31,15 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let total_Sum = 0;
+  let index = 0;
+
+  while (index < numbers.length) {
+    total_Sum += numbers[index];
+    index++;
+  }
+
+  return total_Sum / numbers.length;
 }
 
 /**
@@ -28,6 +48,17 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  minVal = 0;
+  index = 0;
+
+  while (index < numbers.length) {
+    if (numbers[index] < minVal) {
+      minVal = numbers[index];
+    }
+    index++;
+  }
+
+  return minVal;
 }
 
 /**
@@ -36,6 +67,17 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  maxVal = 0;
+  index = 0;
+
+  while (index < numbers.length) {
+    if (numbers[index] > maxVal) {
+      maxVal = numbers[index];
+    }
+    index++;
+  }
+
+  return maxVal;
 }
 
 /**
@@ -44,6 +86,22 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+  maxVal = 0;
+  minVal = 0;
+  
+
+  index = 0;
+
+  while (index < numbers.length) {
+    if (numbers[index] > maxVal) {
+      maxVal = numbers[index];
+    } 
+    else if (numbers[index] < minVal) {
+      minVal = numbers[index];
+    }
+    index++;
+  }
+return maxVal -= minVal;
 }
 
 /**
@@ -52,6 +110,17 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  let index = 0;
+  let solve = [];
+
+  while (index < numbers.length) {
+    if (numbers[index] % 2 === 0) {
+      solve.push(numbers[index]);
+    }
+    index++;
+  }
+
+  return solve;
 }
 
 /**
@@ -60,6 +129,16 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  oddVal = [];
+  index = 0;
+
+  while (index < numbers.length) {
+    if (numbers[index] % 2 !== 0) {
+      oddVal.push(numbers[index]);
+    }
+    index++;
+  }
+  return oddVal;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
